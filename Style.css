@@ -1,0 +1,112 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+/* Soft light background */
+body{
+min-height:100vh;
+background:linear-gradient(120deg,#e0f7fa,#e8f5e9,#f1f8e9);
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+/* Heading */
+h1{
+width:100%;
+text-align:center;
+padding:20px;
+font-size:2.2rem;
+background:#ffffff;
+color:#2c3e50;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Choices section */
+.choices{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:2.5rem;
+margin-top:4rem;
+}
+
+/* Choice cards */
+.choice{
+height:160px;
+width:160px;
+border-radius:20px;
+background:#ffffff;
+display:flex;
+justify-content:center;
+align-items:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.choice:hover{
+cursor:pointer;
+transform:translateY(-8px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+background:#f0fbff;
+}
+
+/* Images */
+img{
+height:110px;
+width:110px;
+}
+
+/* Scoreboard */
+.scroreboard{
+display:flex;
+gap:4rem;
+margin-top:3rem;
+}
+
+/* Score cards */
+.scrore,.score{
+background:#ffffff;
+padding:20px 35px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Score numbers */
+#user-score,#comp-score{
+font-size:3.5rem;
+color:#26a69a;
+font-weight:bold;
+}
+
+/* Labels */
+.scrore p:last-child,
+.score p:last-child{
+color:#555;
+}
+
+/* Message container */
+.msg-contanier{
+margin-top:3rem;
+}
+
+/* Message style */
+#msg{
+background:#4fc3f7;
+color:white;
+padding:15px 35px;
+border-radius:30px;
+font-size:1.4rem;
+box-shadow:0 8px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+#msg:hover{
+transform:scale(1.05);
+background:#29b6f6;
+}
