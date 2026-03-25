@@ -1,112 +1,147 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+/* 🌟 Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Soft light background */
-body{
-min-height:100vh;
-background:linear-gradient(120deg,#e0f7fa,#e8f5e9,#f1f8e9);
-display:flex;
-flex-direction:column;
-align-items:center;
+/* Body dark gradient background */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e1e2f, #2b2b3c);
+    padding: 20px;
 }
 
-/* Heading */
-h1{
-width:100%;
-text-align:center;
-padding:20px;
-font-size:2.2rem;
-background:#ffffff;
-color:#2c3e50;
-box-shadow:0 4px 10px rgba(0,0,0,0.08);
+/* Container for centering */
+.container {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
 }
 
-/* Choices section */
-.choices{
-display:flex;
-justify-content:center;
-align-items:center;
-flex-wrap:wrap;
-gap:2.5rem;
-margin-top:4rem;
+/* Heading with neon accent */
+h1 {
+    font-size: 3rem;
+    color: #00ffe0; /* Neon cyan */
+    text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0;
+    margin-bottom: 50px;
+    transition: transform 0.3s ease;
 }
 
-/* Choice cards */
-.choice{
-height:160px;
-width:160px;
-border-radius:20px;
-background:#ffffff;
-display:flex;
-justify-content:center;
-align-items:center;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-transition:0.3s;
+h1:hover {
+    transform: scale(1.05);
 }
 
-.choice:hover{
-cursor:pointer;
-transform:translateY(-8px);
-box-shadow:0 12px 25px rgba(0,0,0,0.15);
-background:#f0fbff;
+/* Choices Section - glass + neon hover */
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-/* Images */
-img{
-height:110px;
-width:110px;
+.choice {
+    width: 160px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Scoreboard */
-.scroreboard{
-display:flex;
-gap:4rem;
-margin-top:3rem;
+.choice img {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 10px;
 }
 
-/* Score cards */
-.scrore,.score{
-background:#ffffff;
-padding:20px 35px;
-border-radius:15px;
-text-align:center;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
+.choice span {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px rgba(0,0,0,0.7);
 }
 
-/* Score numbers */
-#user-score,#comp-score{
-font-size:3.5rem;
-color:#26a69a;
-font-weight:bold;
+/* Hover neon effect */
+.choice:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 0 15px #ff3d81, 0 0 30px #ff3d81; /* Neon pink glow */
 }
 
-/* Labels */
-.scrore p:last-child,
-.score p:last-child{
-color:#555;
+/* Scoreboard - dark glass + neon accent */
+.scoreboard {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 50px;
+}
+
+.score-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    padding: 25px 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    color: #00ffe0; /* Neon cyan text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.score-card p {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.score-card span {
+    font-size: 1.1rem;
+    color: #ff3d81; /* Neon pink label */
+}
+
+.score-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #00ffe0, 0 0 40px #ff3d81;
 }
 
 /* Message container */
-.msg-contanier{
-margin-top:3rem;
+.msg-container {
+    margin-top: 40px;
 }
 
-/* Message style */
-#msg{
-background:#4fc3f7;
-color:white;
-padding:15px 35px;
-border-radius:30px;
-font-size:1.4rem;
-box-shadow:0 8px 15px rgba(0,0,0,0.1);
-transition:0.3s;
+#msg {
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 1.4rem;
+    color: #ffffff;
+    background: rgba(0,0,0,0.3);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease, color 0.3s ease, background 0.3s ease;
+    text-shadow: 0 0 5px #ffffff;
 }
 
-#msg:hover{
-transform:scale(1.05);
-background:#29b6f6;
+#msg.win {
+    color: #00ff85; /* Neon green */
+    text-shadow: 0 0 10px #00ff85;
+}
+
+#msg.lose {
+    color: #ff4d6d; /* Neon red */
+    text-shadow: 0 0 10px #ff4d6d;
+}
+
+#msg.draw {
+    color: #ffff66; /* Neon yellow */
+    text-shadow: 0 0 10px #ffff66;
+}
+
+#msg:hover {
+    transform: scale(1.05);
 }
